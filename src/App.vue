@@ -1,6 +1,5 @@
 <template>
-  <SearchBar />
-  Hi there
+  <SearchBar @termChange="onTermChange" />
 </template>
 
 <script>
@@ -10,6 +9,11 @@ export default {
   name: 'App',
   components: {
     SearchBar
+  },
+  methods: {
+    onTermChange(searchTerm) {
+      console.log('app component: ', searchTerm);
+    }
   }
 }
 </script>
